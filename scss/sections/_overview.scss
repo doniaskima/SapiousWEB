@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Poppins:ital,wght@0,400;0,900;1,600;1,700;1,900&family=Rajdhani:wght@300&family=Shadows+Into+Light&display=swap');
+#overview {
+    background: linear-gradient( to right, rgb(29, 33, 68), rgb(30, 25, 47));
+    height: 120vh;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#background {
+    display: grid;
+    inset: 0px;
+    place-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.app {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    position: relative;
+    width: 100vw;
+    z-index: 2;
+}
+
+.heading-line::before {
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: #FFB6C1;
+    margin-top: 0;
+}
+
+.heading-line::after {
+    content: "";
+    width: 2rem;
+    padding-top: 0.5rem;
+    height: 0.2rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: #FFB6C1;
+}
+
+#nav {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 120px;
+}
+
+#nav-items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 120px;
+}
+
+.title {
+    font-size: 3rem;
+    color: #FFB6C1;
+}
+
+#profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 0.8vw, 20px);
+    justify-content: center;
+    margin-left: 80px;
+    width: clamp(600px, 80vw, 1400px);
+}
+
+#profiles>.profile {
+    backdrop-filter: blur(0.75vw);
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: background-color 250ms;
+    width: calc(25% - clamp(10px, 0.8vw, 20px));
+}
+
+#profiles>.profile:hover {
+    backdrop-filter: blur(1vw);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile>.profile-content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - clamp(8px, 1vw, 12px));
+    justify-content: center;
+    padding: clamp(8px, 1vw, 12px);
+}
+
+.profile .profile-content h1 {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.profile .profile-content p {
+    font-family: 'Yantramanav', sans-serif;
+    ;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.profile .profile-content span {
+    color: #FFB6C1;
+}

@@ -1,0 +1,90 @@
+#portfolio {
+    background: white;
+    height: 120vh;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.contrainer {
+    display: flex;
+    width: 90vw;
+}
+
+.special-text {
+    color: #DA70D6;
+    font-family: 'Indie Flower', cursive;
+    ;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+.belief .title span {
+    --total: calc(var(--duration) + var(--delay));
+    position: relative;
+    display: block;
+    color: transparent;
+    overflow: hidden;
+    animation: revealText 1s var(--total) forwards;
+}
+
+.belief .title span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #bb93fc;
+    animation: rollIn var(--duration) var(--delay) forwards, rollOut var(--duration) var(--total) forwards;
+}
+
+#belief {
+    background: #FFB6C1;
+    height: 120vh;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}

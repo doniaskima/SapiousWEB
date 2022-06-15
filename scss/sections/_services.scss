@@ -1,0 +1,13 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.container .row .title-B {
+    font-size: 5rem;
+}
+
+.container {
+    &--title {
+        color: $blue;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+}
